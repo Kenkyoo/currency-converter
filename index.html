@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Convertidor de Monedas</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-5" id="navbar" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo material-icons">monetization_on</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Inicio</a></li>
+      </ul>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Inicio</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="light-blue lighten-5" id="hero">
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+        <h1 class="header center">Convertidor de Monedas</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Convierte fácilmente entre diferentes monedas usando datos actualizados en tiempo real.</h5>
+        </div>
+        <br><br>
+      </div>
+    </div>
+
+    <div class="container" id="hero">
+      <div class="section">
+        <div class="row converter-container grey lighten-5 z-depth-5">
+          <div class="input-field col s12 col s4">
+            <input placeholder="Cantidad" id="amount" type="text" class="validate">
+            <label for="amount">Monto</label>
+          </div>
+          <div class="input-field col s12 col s4">
+            <select id="selectRatesFrom">
+              <option value="" disabled selected>Desde</option>
+            </select>
+            <label>Desde</label>
+          </div>
+          <div class="input-field col s12 col s4">
+            <select id="selectRatesTo">
+              <option value="" disabled selected>Hasta</option>
+            </select>
+            <label>Hasta</label>
+          </div>
+          <div>
+            <h4 class="scale-transition center-align" id="result"></h4>
+          </div>
+          <a class="waves-effect waves-light btn pulse center-align light-blue accent-3" id="btn">Convertir</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a id="menu" class="waves-effect waves-light btn btn-floating"><i class="material-icons">menu</i></a>
+  <div class="right-align">
+    <a class="btn-floating btn-large waves-effect waves-light light-blue darken-4" onclick="$('.tap-target').tapTarget('open')"><i class="material-icons">add</i></a>
+  </div>
+  
+  <div class="tap-target" data-target="menu">
+    <div class="tap-target-content">
+      <h5>Explora Más</h5>
+      <p>Descubre más funciones y opciones dentro de nuestra página.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div>
+        <h3 class="text-light-blue">Monedas Disponibles</h3>
+        <nav class="light-blue lighten-4">
+          <div class="nav-wrapper">
+            <form>
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons" id="btnSearch">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>       
+      <ul class="collection z-depth-5" id="collection"></ul>
+    </div>
+  </div>
+
+  <footer class="page-footer light-blue lighten-5">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Acerca de Nosotros</h5>
+          <p class="grey-text text-lighten-4">Somos un equipo dedicado a proporcionar herramientas útiles y precisas para la conversión de monedas. Nuestro objetivo es facilitar tus transacciones internacionales.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Recursos</h5>
+          <ul>
+            <li><a class="white-text" href="#!">API de Conversión</a></li>
+            <li><a class="white-text" href="#!">Documentación</a></li>
+            <li><a class="white-text" href="#!">Soporte</a></li>
+            <li><a class="white-text" href="#!">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Conéctate</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Facebook</a></li>
+            <li><a class="white-text" href="#!">Twitter</a></li>
+            <li><a class="white-text" href="#!">LinkedIn</a></li>
+            <li><a class="white-text" href="#!">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Hecho por <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>  
+  <script src="js/materialize/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

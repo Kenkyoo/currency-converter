@@ -1,0 +1,48 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.converter-container {
+  padding: 70px 20px;
+  border-radius: 40px;
+  border-color: solid 1px black;
+}
+
+#collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#menu {
+  position: fixed;
+  bottom: 10;
+  right: 10;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 2;
+}
+
+#logo-container {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  #collection {
+    grid-template-columns: auto;
+  }
+}
